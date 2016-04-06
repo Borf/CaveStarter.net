@@ -46,6 +46,7 @@ namespace CaveStarter.net
 					case "simplestart":
 					case "simplestartslaves":
 					case "stopvr":
+					case "shutdown":
 						foreach (var c in server.clients)
 							c.workSocket.Send(Encoding.UTF8.GetBytes("do" + line + "\r\n"));
 

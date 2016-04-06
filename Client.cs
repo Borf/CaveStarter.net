@@ -203,7 +203,9 @@ namespace CaveStarter.net
 								MessageBox.Show(e.StackTrace);
 						}
 						break;
-
+					case "doshutdown":
+						Process.Start("shutdown", "/s /t 0");
+						break;
 					default:
 						form.addLine("[client] Unknown command: " + command);
 						break;
